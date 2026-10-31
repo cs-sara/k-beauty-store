@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Beauty Korea | متجر العناية الكورية الفاخر</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- شريط تنبيهات أعلى المتجر -->
+    <div class="top-bar">
+        ✨ شحن مجاني للطلبات أكثر من 200 ريال | منتجات كورية أصلية 100% 🇰🇷
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="navbar">
+        <div class="logo">
+            <span>K-BEAUTY</span>
+            <small>العناية الكورية</small>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="ابحثي عن سيروم، واقي شمس، قناع...">
+            <button>🔍</button>
+        </div>
+
+        <div class="header-actions">
+            <div class="cart-btn" onclick="toggleCart()">
+                🛒 السلة
+                <span id="cart-count" class="badge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- البانر الرئيسي الفاخر -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="tag">التشكيلة الجديدة 🌸</span>
+            <h1>سر البشرة الزجاجية الكورية</h1>
+            <p>اكتشفي أفضل روتين كوري مستورد خصيصاً لإشراقة وبشرة ناعمة كالحرير</p>
+            <a href="#products-section" class="btn-shop">تسوقي الآن ✨</a>
+        </div>
+    </section>
+
+    <!-- مميزات المتجر -->
+    <section class="features">
+        <div class="feature-card">
+            <span class="icon">🚀</span>
+            <div>
+                <h4>توصيل سريع</h4>
+                <p>خلال 2-4 أيام عمل</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <span class="icon">✨</span>
+            <div>
+                <h4>منتجات أصلية</h4>
+                <p>مضمونة ومستوردة من كوريا</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <span class="icon">💳</span>
+            <div>
+                <h4>دفع آمن</h4>
+                <p>مدى / فيزة / تقسيط</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات -->
+    <main class="container" id="products-section">
+        <div class="section-header">
+            <h2>المنتجات الأكثر طلباً 🔥</h2>
+            <div class="categories-tabs">
+                <button class="tab-btn active" onclick="filterCategory('all')">الكل</button>
+                <button class="tab-btn" onclick="filterCategory('serum')">سيرومات</button>
+                <button class="tab-btn" onclick="filterCategory('sunblock')">واقيات شمس</button>
+                <button class="tab-btn" onclick="filterCategory('masks')">أقنعة وتونر</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-list">
+            <!-- سيتم توليد المنتجات هنا ديناميكياً بواسطة JavaScript -->
+        </div>
+    </main>
+
+    <!-- السلة الجانبية التفاعلية السريعة -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>حقيبة التسوق 🛍️</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+
+        <div class="cart-body" id="cartItems">
+            <!-- تفاصيل المنتجات داخل السلة -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="summary-line">
+                <span>المجموع الفرعي:</span>
+                <strong id="totalAmount">0 ر.س</strong>
+            </div>
+            <div class="summary-line highlight">
+                <span>الشحن:</span>
+                <span id="shippingText">مجاني</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">إتمام الطلب الآن ✨</button>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+                           </html>
+                           
